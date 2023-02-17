@@ -1,0 +1,132 @@
+/* SIDEBAR RELATED PART */
+
+.navigation ul li .active svg {
+  fill: currentcolor;
+}
+
+.navigation ul li svg {
+  fill: currentcolor;
+}
+
+.navigation ul li span {
+  margin-left: 20px;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+::-webkit-scrollbar {
+  width: 11px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #97979777;
+  height: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff77;
+  transition: 0.5s;
+  visibility: visible;
+}
+
+.nav .d-flex img {
+  width: 130px;
+  margin-left: 8%;
+  margin-top: 10%;
+  margin-bottom: 8%;
+}
+
+.navbar-fixed-left {
+  position: fixed;
+  width: 241px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 4;
+  flex-direction: column;
+  align-items: start;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.justify-content-start {
+  flex-wrap: wrap;
+}
+
+.text-green {
+  color: #1ed760 !important;
+}
+
+.nav ul {
+  padding-left: 10px;
+}
+.nav .navigation ul li {
+  list-style: none;
+  margin-top: 20%;
+}
+
+.nav .navigation ul li {
+  padding: 0px 5px;
+}
+
+.nav .navigation ul li a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 90%;
+}
+
+.nav .navigation ul li a:hover,
+.nav .navigation ul li a:active,
+.nav .navigation ul li a:focus {
+  color: #ffffff;
+}
+
+.nav .navigation ul li a:hover ion-icon,
+.nav .navigation ul li a:active ion-icon,
+.nav .navigation ul li a:focus ion-icon {
+  color: #b3b3b3;
+}
+
+.nav .navigation ul li ion-icon {
+  font-size: 150%;
+  margin-right: 2vh;
+}
+
+.nav .navigation ul li a:hover ion-icon:hover,
+.nav .navigation ul li a:active ion-icon:active,
+.nav .navigation ul li a:focus ion-icon:focus {
+  color: #ffffff;
+}
+
+.scroll-container ul {
+  list-style-type: none;
+}
+.scroll-container a {
+  color: #a7a7a7;
+  text-decoration: none;
+}
+
+.scroll-container {
+  position: absolute;
+  margin: -8px 0px;
+  width: 210px;
+  height: 479px;
+  margin-top: 380px;
+  padding-top: 15px;
+  margin-right: 10px;
+  z-index: 5;
+  border-top: 1px solid rgba(128, 128, 128, 0.395);
+}
+
+.scroll-container .overflow-auto {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  transform: translateZ(0);
+  vertical-align: baseline;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
