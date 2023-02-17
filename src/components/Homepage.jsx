@@ -1,20 +1,24 @@
-import { useDispatch, useSelector } from "react-redux";
-import { getSongData } from "../redux/actions";
+import { Container, Row } from "react-bootstrap";
+import { useSelector } from "react-redux";
+import "../styles/Homepage.css";
+import Song from "./Song";
 
 const Homepage = () => {
-  const dispatch = useDispatch();
   const songs = useSelector((state) => state.song.songData);
-  const isError = useSelector((state) => state.song.isErrorSong);
-  const isLoading = useSelector((state) => state.song.isLoadingSong);
-  const query = useSelector((state) => state.search);
-  console.log("songs", songs);
-  console.log("isError", isError);
-  console.log("isLoading", isLoading);
-  console.log("query", query);
+  //   const isError = useSelector((state) => state.song.isErrorSong);
+  //   const isLoading = useSelector((state) => state.song.isLoadingSong);
+  //   const query = useSelector((state) => state.search);
+
   return (
-    <div className="sidebar-fix">
-      <h1>Homepage</h1>
-    </div>
+    <Container fluid id="homepageContainer">
+      <h1>Welcome</h1>
+      <Row>
+        {songs &&
+          songs.map((song) => {
+            return <Song key={song.id} s={song} />;
+          })}
+      </Row>
+    </Container>
   );
 };
 

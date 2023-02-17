@@ -1,0 +1,85 @@
+#homepageContainer {
+  width: calc(100vw - 241px);
+  margin-left: 241px;
+}
+
+#homepageContainer .songCard {
+  background-color: #242424;
+  transition: all 250ms ease;
+}
+
+#homepageContainer .songCard:hover {
+  background-color: #404040;
+}
+
+#homepageContainer .songCard .card-body {
+  padding: 0;
+  min-height: 65px;
+}
+
+.img-wrapper {
+  margin-bottom: 16px;
+  position: relative;
+  transition: all 250ms ease;
+}
+
+.img-wrapper img {
+  object-fit: contain;
+}
+
+#homepageContainer .songCard:hover .img-wrapper {
+  box-shadow: 0px 3px 3px 0px #242424;
+}
+
+.btn-transparent {
+  border: transparent;
+  background-color: transparent;
+}
+
+.img-wrapper .btn-transparent {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  opacity: 0;
+  transition: all 300ms ease;
+  z-index: 100;
+}
+
+.card:hover .img-wrapper .btn-transparent {
+  opacity: 1;
+}
+
+.card .img-wrapper .btn-transparent:hover {
+  scale: 1.04;
+}
+
+.btn-transparent .play-button-cards {
+  background-color: #1bd760;
+  border-radius: 500px;
+  height: 48px;
+  width: 48px;
+}
+
+.btn-transparent:hover {
+  background-color: none;
+  border-radius: 500px;
+  opacity: 1;
+}
+
+.play-button-cards {
+  background-color: #1bd760;
+  border-radius: 500px;
+  height: 48px;
+  width: 48px;
+}
+
+.container-fluid .card-title {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.container-fluid .card-subtitle {
+  font-size: 0.875rem;
+  color: #a7a7a7;
+  font-weight: 400;
+}
