@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer";
 import HeaderCustom from "./components/HeaderCustom";
+import Homepage from "./components/Homepage";
 import SideBar from "./components/SideBar";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
               <>
                 <HeaderCustom />
                 <SideBar />
+                <Homepage />
                 <Footer />
               </>
             }
