@@ -93,6 +93,11 @@
   border-color: white;
 }
 
+#searchInput::selection {
+  background-color: white;
+  color: #000;
+}
+
 #searchButton:hover,
 #searchButton:active,
 #searchButton:focus,
