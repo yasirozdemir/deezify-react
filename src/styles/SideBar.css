@@ -62,7 +62,7 @@
 }
 .nav .navigation ul li {
   list-style: none;
-  margin-top: 20%;
+  margin-top: 20px;
 }
 
 .nav .navigation ul li {
@@ -76,6 +76,28 @@
   font-size: 90%;
 }
 
+#searchButton {
+  color: #b3b3b3;
+  background-color: transparent;
+  border: transparent;
+  padding: 0;
+}
+
+#searchInput {
+  background-color: transparent;
+  color: #ffffff;
+  width: 75%;
+}
+
+#searchInput:focus,
+#searchInput:active {
+  box-shadow: none;
+  border-color: white;
+}
+
+#searchButton:hover,
+#searchButton:active,
+#searchButton:focus,
 .nav .navigation ul li a:hover,
 .nav .navigation ul li a:active,
 .nav .navigation ul li a:focus {
