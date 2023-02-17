@@ -1,14 +1,21 @@
 import { useState } from "react";
 import { Nav, Form } from "react-bootstrap";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { SET_SEARCH_QUERY } from "../redux/actions";
 import "../styles/SideBar.css";
 
 const SideBar = () => {
+  const dispatch = useDispatch();
+
   const [isSearchClicked, setIsSearchClicked] = useState(false);
-  const [query, setQuery] = useState("");
+  const query = useSelector((state) => state.search);
 
   const handleChange = (e) => {
-    setQuery(e.target.value);
+    dispatch({
+      type: SET_SEARCH_QUERY,
+      payload: e.target.value,
+    });
   };
 
   const handleSubmit = async (e) => {

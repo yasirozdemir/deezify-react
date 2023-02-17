@@ -3,6 +3,7 @@ import { url } from "../../utils";
 export const SET_SONG_DATA = "SET_SONG_DATA";
 export const SET_SONG_ERROR = "SET_SONG_ERROR";
 export const SET_SONG_LOADING = "SET_SONG_LOADING";
+export const SET_SEARCH_QUERY = "SET_SEARCH_QUERY";
 
 export const getSongData = () => {
   return async (dispatch) => {
