@@ -1,3 +1,20 @@
+@font-face {
+  font-family: circular;
+  src: url("../src/assets/fonts/circular/CircularStd-Book.otf")
+    format("opentype");
+}
+
+#root {
+  background-color: #121212;
+  color: #a7a7a7;
+  font-family: circular;
+  line-height: 1.6;
+}
+
 .bg-black {
   background-color: black;
+}
+
+.navbar-fix {
+  margin-left: 241px;
 }

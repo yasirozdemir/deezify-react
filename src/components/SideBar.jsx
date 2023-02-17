@@ -61,8 +61,8 @@ const SideBar = () => {
           </li>
         </ul>
       </div>
-      <div class="scroll-container">
-        <div class="overflow-auto">
+      <div className="scroll-container">
+        <div className="overflow-auto">
           <ul>
             <li>{/* <Link to="/">Scroll menu works :)</Link> */}</li>
           </ul>
