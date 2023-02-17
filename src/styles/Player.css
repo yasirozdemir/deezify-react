@@ -137,3 +137,7 @@ input[type="range"]::-ms-thumb {
   border-radius: 500px;
   background: white;
 }
+
+#dislikeButton path {
+  fill: #1bd760;
+}

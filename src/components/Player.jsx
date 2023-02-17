@@ -8,9 +8,7 @@ const Player = () => {
 
   const selectedSong = useSelector((state) => state.song.selectedSong);
   const likedSongs = useSelector((state) => state.lists.likedSongs);
-  console.log(likedSongs);
   const isLiked = likedSongs.some((s) => selectedSong.id === s.id);
-  console.log(isLiked);
 
   return (
     <footer className="fixed-bottom d-flex align-items-center justify-content-between">
@@ -35,6 +33,7 @@ const Player = () => {
         </div>
         {isLiked ? (
           <button
+            id="dislikeButton"
             className="btn-transparent px-2"
             onClick={() => {
               dispatch(removeSongFromList(selectedSong.id));
