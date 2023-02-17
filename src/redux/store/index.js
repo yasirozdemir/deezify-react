@@ -4,6 +4,7 @@ import localStorage from "redux-persist/lib/storage";
 import { encryptTransform } from "redux-persist-transform-encrypt";
 import SongReducer from "../reducers/SongReducer";
 import SearchReducer from "../reducers/SearchReducer";
+import ListReducer from "../reducers/ListReducer";
 
 const persistConfig = {
   storage: localStorage,
@@ -18,6 +19,7 @@ const persistConfig = {
 const combinedReducers = combineReducers({
   song: SongReducer,
   search: SearchReducer,
+  lists: ListReducer,
   // like: LikeReducer,
 });
 

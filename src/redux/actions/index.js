@@ -5,6 +5,8 @@ export const SET_SONG_ERROR = "SET_SONG_ERROR";
 export const SET_SONG_LOADING = "SET_SONG_LOADING";
 export const SET_SEARCH_QUERY = "SET_SEARCH_QUERY";
 export const SET_SELECTED_SONG = "SET_SELECTED_SONG";
+export const ADD_SONG_TO_LIST = "ADD_SONG_TO_LIST";
+export const REMOVE_SONG_FROM_LIST = "REMOVE_SONG_FROM_LIST";
 
 export const getSongData = (query) => {
   return async (dispatch) => {
@@ -50,11 +52,29 @@ export const getSongData = (query) => {
   };
 };
 
-export const setSelectedSong = (s) => {
+export const setSelectedSong = (song) => {
   return (dispatch) => {
     dispatch({
       type: SET_SELECTED_SONG,
-      payload: s,
+      payload: song,
+    });
+  };
+};
+
+export const addSongToList = (song) => {
+  return (dispatch) => {
+    dispatch({
+      type: ADD_SONG_TO_LIST,
+      payload: song,
+    });
+  };
+};
+
+export const removeSongFromList = (id) => {
+  return (dispatch) => {
+    dispatch({
+      type: REMOVE_SONG_FROM_LIST,
+      payload: id,
     });
   };
 };

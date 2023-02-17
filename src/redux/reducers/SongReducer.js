@@ -9,7 +9,7 @@ const inState = {
   songData: [],
   isErrorSong: false,
   isLoadingSong: true,
-  selectedSong: {},
+  selectedSong: null,
 };
 
 const SongReducer = (state = inState, action) => {
