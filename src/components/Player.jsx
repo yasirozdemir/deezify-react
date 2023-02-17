@@ -10,6 +10,8 @@ const Player = () => {
   const likedSongs = useSelector((state) => state.lists.likedSongs);
   const isLiked = likedSongs.some((s) => selectedSong.id === s.id);
 
+  console.log(selectedSong);
+
   return (
     <footer className="fixed-bottom d-flex align-items-center justify-content-between">
       <div className="d-flex footer-info align-items-center w-30">
@@ -111,7 +113,7 @@ const Player = () => {
           <div className="progress w-100"></div>
           <div className="maxDur">0:31</div>
         </div>
-        {/* <audio src=""></audio> */}
+        {/* <audio src={selectedSong.preview}></audio> */}
       </div>
       <div className="d-flex justify-content-end align-items-center footer-controls w-30">
         <button className="btn-transparent px-2">
