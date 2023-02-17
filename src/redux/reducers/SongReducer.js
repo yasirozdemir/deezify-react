@@ -1,9 +1,15 @@
-import { SET_SONG_DATA, SET_SONG_ERROR, SET_SONG_LOADING } from "../actions";
+import {
+  SET_SELECTED_SONG,
+  SET_SONG_DATA,
+  SET_SONG_ERROR,
+  SET_SONG_LOADING,
+} from "../actions";
 
 const inState = {
   songData: [],
   isErrorSong: false,
   isLoadingSong: true,
+  selectedSong: {},
 };
 
 const SongReducer = (state = inState, action) => {
@@ -22,6 +28,11 @@ const SongReducer = (state = inState, action) => {
       return {
         ...state,
         isLoadingSong: action.payload,
+      };
+    case SET_SELECTED_SONG:
+      return {
+        ...state,
+        selectedSong: action.payload,
       };
     default:
       return state;
