@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Nav, Form } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { SET_SEARCH_QUERY } from "../redux/actions";
+import { getSongData, SET_SEARCH_QUERY } from "../redux/actions";
 import "../styles/SideBar.css";
 
 const SideBar = () => {
@@ -20,6 +20,7 @@ const SideBar = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    dispatch(getSongData(query));
   };
 
   return (
