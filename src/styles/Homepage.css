@@ -1,6 +1,7 @@
 #homepageContainer {
   width: calc(100vw - 241px);
   margin-left: 241px;
+  margin-top: 80px;
 }
 
 #homepageContainer .songCard {

@@ -4,6 +4,10 @@
     format("opentype");
 }
 
+html {
+  background-color: #121212;
+}
+
 #root {
   background-color: #121212;
   color: #a7a7a7;
