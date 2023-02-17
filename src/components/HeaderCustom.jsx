@@ -5,7 +5,7 @@ import { Dropdown } from "react-bootstrap";
 
 const HeaderCustom = () => {
   return (
-    <div id="header">
+    <div id="header" className="fixed-top">
       <div className="d-flex align-items-center" style={{ height: "80px" }}>
         <div className="ml-2 btn-group" role="group">
           <button type="button" id="prevButton" aria-label="Go back">

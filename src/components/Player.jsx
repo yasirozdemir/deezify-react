@@ -119,7 +119,7 @@ const Player = () => {
           <div className="progress w-100"></div>
           <div className="maxDur">0:31</div>
         </div>
-        <audio src="https://cdns-preview-f.dzcdn.net/stream/c-fed011a6ae583dff1c842e03227ae876-3.mp3"></audio>
+        {/* <audio src=""></audio> */}
       </div>
       <div className="d-flex justify-content-end align-items-center footer-controls w-30">
         <button className="btn-transparent px-2">
