@@ -8,7 +8,7 @@ import "../styles/Footer.css";
 const Footer = () => {
   return (
     <>
-      <div id="footer" className="py-3 navbar-fix">
+      <div id="footer" className="py-3 sidebar-fix">
         <div>
           <div className="row m-3 flex-column flex-md-row">
             <div className="col-9 p-0 row flex-column flex-md-row">
