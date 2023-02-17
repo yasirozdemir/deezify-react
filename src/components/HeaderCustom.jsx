@@ -80,6 +80,12 @@ const HeaderCustom = () => {
               <Link to="/" className="dropdown-item mt-1" type="button">
                 Profile
               </Link>
+              <Link to="/" className="dropdown-item mt-1" type="button">
+                Support
+              </Link>
+              <Link to="/" className="dropdown-item mt-1" type="button">
+                Download
+              </Link>
               <Link
                 to="/"
                 className="dropdown-item mt-1 pb-1"
