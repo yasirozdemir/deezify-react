@@ -3,6 +3,7 @@ import "./App.css";
 import Footer from "./components/Footer";
 import HeaderCustom from "./components/HeaderCustom";
 import Homepage from "./components/Homepage";
+import Player from "./components/Player";
 import SideBar from "./components/SideBar";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
                 <SideBar />
                 <Homepage />
                 <Footer />
+                <Player />
               </>
             }
           />
