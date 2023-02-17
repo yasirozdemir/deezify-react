@@ -57,8 +57,9 @@ const HeaderCustom = () => {
                   className="d-none d-lg-inline mx-2"
                   style={{ minWidth: "60px" }}
                 >
-                  username
+                  M. Yasir Ozdemir
                 </span>
+                {/* username could be updated with signing in func */}
                 <svg
                   className="d-none d-lg-inline"
                   fill="#fff"
