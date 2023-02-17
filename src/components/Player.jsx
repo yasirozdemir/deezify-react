@@ -68,7 +68,7 @@ const Player = () => {
           </svg>
         </button>
       </div>
-      <div className="w-30">
+      <div className="w-40">
         <ReactAudioPlayer
           src={selectedSong.preview}
           controls
