@@ -108,8 +108,14 @@ const SideBar = () => {
               likedSongs.map((song) => {
                 return (
                   <li key={song.id}>
-                    <div className="d-flex align-items-center">
-                      <Link to="/">{song.title}</Link>
+                    <div className="d-flex align-items-center mt-1">
+                      <Link
+                        to="/"
+                        className="text-truncate"
+                        style={{ width: "160px", color: "white" }}
+                      >
+                        {song.title}
+                      </Link>
                       <button
                         id="dislikeButton"
                         className="btn-transparent px-2 ml-auto"
