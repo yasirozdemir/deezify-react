@@ -11,7 +11,7 @@ const Homepage = () => {
 
   return (
     <Container fluid id="homepageContainer">
-      <h1>Welcome</h1>
+      <h2>Welcome</h2>
       <Row>
         {songs &&
           songs.map((song) => {

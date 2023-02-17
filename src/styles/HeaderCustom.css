@@ -1,3 +1,7 @@
+#header {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 #header .btn-group:nth-of-type(1) button {
   display: inline-flex;
   border-radius: 50%;
