@@ -1,14 +1,31 @@
 import "../styles/Player.css";
 import pasha from "../assets/pasha.png";
+import { useSelector } from "react-redux";
 
 const Player = () => {
+  const selectedSong = useSelector((state) => state.song.selectedSong);
+  console.log(selectedSong);
+
   return (
     <footer className="fixed-bottom d-flex align-items-center justify-content-between">
       <div className="d-flex footer-info align-items-center w-30">
-        <img src={pasha} width="56" alt="current song" />
+        {selectedSong ? (
+          <img src={selectedSong.album.cover} width="56" alt="current song" />
+        ) : (
+          <img src={pasha} width="56" alt="current song" />
+        )}
         <div className="d-flex flex-column px-3 justify-content-center">
-          <h6>Yasir Ozdemir</h6>
-          <span>:)</span>
+          {selectedSong ? (
+            <>
+              <h6>{selectedSong.artist.name}</h6>
+              <span>{selectedSong.title_short}</span>
+            </>
+          ) : (
+            <>
+              <h6>Yasir Ozdemir</h6>
+              <span>Hi, there. This is my cat Pasha :)</span>
+            </>
+          )}
         </div>
         <button className="btn-transparent px-2">
           <svg role="img" height="16" width="16" aria-hidden="true">

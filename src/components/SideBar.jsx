@@ -24,7 +24,7 @@ const SideBar = () => {
   };
 
   return (
-    <Nav className="text-white bg-black navbar-fixed-left">
+    <Nav id="sidebar" className="text-white bg-black navbar-fixed-left">
       <div className="d-flex flex-column justify-content-start">
         <Link to="/" className="navbar-brand">
           <img
