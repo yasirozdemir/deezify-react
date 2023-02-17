@@ -4,12 +4,14 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { getSongData, SET_SEARCH_QUERY } from "../redux/actions";
 import "../styles/SideBar.css";
+import { removeSongFromList } from "../redux/actions";
 
 const SideBar = () => {
   const dispatch = useDispatch();
 
   const [isSearchClicked, setIsSearchClicked] = useState(false);
   const query = useSelector((state) => state.search);
+  const likedSongs = useSelector((state) => state.lists.likedSongs);
 
   const handleChange = (e) => {
     dispatch({
@@ -102,7 +104,32 @@ const SideBar = () => {
       <div className="scroll-container">
         <div className="overflow-auto">
           <ul>
-            <li>{/* <Link to="/">Scroll menu works :)</Link> */}</li>
+            {likedSongs &&
+              likedSongs.map((song) => {
+                return (
+                  <li key={song.id}>
+                    <div className="d-flex align-items-center">
+                      <Link to="/">{song.title}</Link>
+                      <button
+                        id="dislikeButton"
+                        className="btn-transparent px-2 ml-auto"
+                        onClick={() => {
+                          dispatch(removeSongFromList(song.id));
+                        }}
+                      >
+                        <svg
+                          role="img"
+                          height="16"
+                          width="16"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M15.724 4.22A4.313 4.313 0 0 0 12.192.814a4.269 4.269 0 0 0-3.622 1.13.837.837 0 0 1-1.14 0 4.272 4.272 0 0 0-6.21 5.855l5.916 7.05a1.128 1.128 0 0 0 1.727 0l5.916-7.05a4.228 4.228 0 0 0 .945-3.577z"></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </li>
+                );
+              })}
           </ul>
         </div>
       </div>
