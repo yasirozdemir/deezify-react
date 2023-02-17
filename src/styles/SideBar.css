@@ -124,24 +124,23 @@
   color: #ffffff;
 }
 
+.scroll-container {
+  position: absolute;
+  margin: -8px 0px;
+  width: 210px;
+  height: 459px;
+  margin-top: 380px;
+  margin-right: 10px;
+  z-index: 5;
+  border-top: 1px solid rgba(128, 128, 128, 0.395);
+}
+
 .scroll-container ul {
   list-style-type: none;
 }
 .scroll-container a {
   color: #a7a7a7;
   text-decoration: none;
-}
-
-.scroll-container {
-  position: absolute;
-  margin: -8px 0px;
-  width: 210px;
-  height: 479px;
-  margin-top: 380px;
-  padding-top: 15px;
-  margin-right: 10px;
-  z-index: 5;
-  border-top: 1px solid rgba(128, 128, 128, 0.395);
 }
 
 .scroll-container .overflow-auto {
@@ -154,4 +153,26 @@
   border: 0;
   margin: 0;
   padding: 0;
+}
+
+#createPlaylistButton svg {
+  background-color: #a7a7a7;
+  color: #1f1f1f;
+  border-radius: 2px;
+  width: 24px;
+  height: 24px;
+  padding: 5px;
+}
+
+#createPlaylistButton svg:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+#likedSongsLink svg {
+  background: linear-gradient(135deg, #450af5, #c4efd9);
+  border-radius: 2px;
+  width: 24px;
+  height: 24px;
+  padding: 5px;
 }
