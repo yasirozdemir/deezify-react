@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer";
+import HeaderCustom from "./components/HeaderCustom";
 import SideBar from "./components/SideBar";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
             path="/"
             element={
               <>
+                <HeaderCustom />
                 <SideBar />
                 <Footer />
               </>

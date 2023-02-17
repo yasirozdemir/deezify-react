@@ -1,0 +1,149 @@
+#header .btn-group:nth-of-type(1) button {
+  display: inline-flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+  color: #fff;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  opacity: 50%;
+  transition: all 150ms;
+}
+
+#header .btn-group:nth-of-type(1) button:hover {
+  opacity: 100%;
+}
+
+#header .btn-group:nth-of-type(1) button i {
+  line-height: 16px;
+}
+
+#header button:focus,
+#mediaButtonsWrapper button:focus {
+  box-shadow: none;
+}
+
+#header {
+  padding-inline: 22px;
+  transition: background-color 300ms, opacity 300ms;
+}
+
+@media (max-width: 685px) {
+  #header h5 {
+    white-space: nowrap;
+    max-width: 230px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #header #prevButton {
+    display: none;
+  }
+
+  #header #dropdownButton {
+    display: none !important;
+  }
+}
+
+#header.halfOp {
+  background-color: #1e1e1e;
+  opacity: 75%;
+}
+
+#header.changedBG {
+  background-color: #1e1e1e;
+  opacity: 100%;
+}
+
+.dropdown-toggle::after {
+  content: none !important;
+}
+
+#dropdownButton {
+  padding: 0 0;
+  overflow: hidden;
+  align-items: center;
+  border-radius: 1.5rem;
+  padding: 0;
+}
+
+#dropdownButton:focus {
+  box-shadow: none;
+}
+
+#dropdownButton > span > span {
+  max-width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.showOnScroll {
+  opacity: 0%;
+  transition: opacity 300ms;
+}
+
+.showOnScroll.opacity-75 {
+  opacity: 75%;
+}
+
+.showOnScroll.opacity-100 {
+  opacity: 100%;
+}
+
+#playButton {
+  cursor: default;
+}
+
+.showOnScroll button {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default !important;
+  background-color: #1fdf64;
+  min-width: 48px;
+  min-height: 48px;
+  border-radius: 50%;
+  transition: all 150ms;
+}
+
+.showOnScroll button:hover {
+  transform: scale(1.04);
+  background-color: #39e678;
+}
+
+.dropdown-menu.dropdown-menu-right {
+  width: 200px;
+  background-color: #2e2e2e;
+  color: #fff;
+  padding-block: 0.2rem;
+  padding-inline: 0.2rem;
+}
+
+.dropdown-menu.dropdown-menu-right a {
+  cursor: default !important;
+}
+
+.dropdown-item {
+  padding: 0.25rem 1rem;
+}
+
+.dropdown-menu.dropdown-menu-right a {
+  color: inherit;
+}
+
+.dropdown-menu.dropdown-menu-right a:hover {
+  background-color: #626262;
+}
+
+.play-button {
+  background-color: #1ed760;
+  border-radius: 500px;
+  height: 56px;
+  width: 56px;
+  margin-right: 32px;
+}
