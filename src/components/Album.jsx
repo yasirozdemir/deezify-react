@@ -4,42 +4,18 @@ import "../styles/Album.css";
 const Album = () => {
   return (
     <div className="sidebar-fix">
-      <Container
-        fluid
-        id="albumInfoWrapper"
-        className="pt-5"
-        style={{ backgroundColor: "#505050" }}
-      >
+      <Container fluid id="albumInfoWrapper" className="pt-5">
         <div className="row pt-5 pb-4">
           <div className="col-md-4 col-lg-3 align-self-end">
-            <img
-              id="albumCover"
-              src=""
-              className="w-100"
-              alt="img placeholder"
-            />
+            <img id="albumCover" src="" className="w-100" alt="album cover" />
           </div>
           <div className="col align-self-end">
-            <h2
-              style={{ fontSize: "0.9vw", margin: "0px", fontWeight: "400" }}
-              className="d-none d-lg-block"
-            >
-              Album
-            </h2>
-            <h1
-              id="albumTitle"
-              style={{ fontSize: "4.5vw", fontWeight: "900" }}
-              className="mt-3"
-            >
+            <h2 className="d-none d-lg-block">Album</h2>
+            <h1 id="albumTitle" className="mt-3">
               Album Title
             </h1>
             <div className="d-flex flex-wrap align-items-center">
-              <img
-                id="artistPicture"
-                src=""
-                alt="artist placeholder"
-                style={{ width: "24px", height: "24px", borderRadius: "50%" }}
-              />
+              <img id="artistPicture" src="" alt="artist placeholder" />
               <a href="#/" id="artistName">
                 Artist Name
               </a>
@@ -74,8 +50,8 @@ const Album = () => {
           </button>
           <button
             // onclick="likeAlbum(this)"
-            className="btn-transparent unlikedAlbum"
-            style={{ marginRight: "32px" }}
+            id="likeButton"
+            className="btn-transparent"
           >
             <svg role="img" height="32" width="32" viewBox="0 0 24 24">
               <path d="M5.21 1.57a6.757 6.757 0 016.708 1.545.124.124 0 00.165 0 6.741 6.741 0 015.715-1.78l.004.001a6.802 6.802 0 015.571 5.376v.003a6.689 6.689 0 01-1.49 5.655l-7.954 9.48a2.518 2.518 0 01-3.857 0L2.12 12.37A6.683 6.683 0 01.627 6.714 6.757 6.757 0 015.21 1.57zm3.12 1.803a4.757 4.757 0 00-5.74 3.725l-.001.002a4.684 4.684 0 001.049 3.969l.009.01 7.958 9.485a.518.518 0 00.79 0l7.968-9.495a4.688 4.688 0 001.049-3.965 4.803 4.803 0 00-3.931-3.794 4.74 4.74 0 00-4.023 1.256l-.008.008a2.123 2.123 0 01-2.9 0l-.007-.007a4.757 4.757 0 00-2.214-1.194z"></path>

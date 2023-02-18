@@ -6,17 +6,33 @@
 
 #albumInfoWrapper {
   padding-inline: 30px;
+  background-color: #505050;
 }
 
-#albumInfoWrapper img {
+#albumInfoWrapper h1 {
+  font-size: 4.5vw;
+  font-weight: 900;
+}
+
+#albumInfoWrapper h2 {
+  font-size: 0.9vw;
+  margin: 0px;
+  font-weight: 400;
+}
+
+#albumInfoWrapper #artistPicture {
   -webkit-box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.45);
   -moz-box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.45);
   box-shadow: 0px 0px 30px 2px rgba(0, 0, 0, 0.45);
+
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
 }
 
 #albumInfoWrapper span,
 #albumInfoWrapper a {
-  margin-left: 0.5rem;
+  margin-inline-start: 0.5rem;
 }
 
 #albumInfoWrapper a {
@@ -37,7 +53,11 @@
   border-radius: 500px;
   height: 56px;
   width: 56px;
-  margin-right: 32px;
+  margin-inline-end: 32px;
+}
+
+#likeButton {
+  margin-inline-end: 32px;
 }
 
 .btn-transparent {
@@ -74,7 +94,7 @@
   text-align: center;
   letter-spacing: 0.1em;
   line-height: 16px;
-  margin-right: 24px;
+  margin-inline-end: 24px;
 }
 .btn-clear:hover {
   cursor: default;
