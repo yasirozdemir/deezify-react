@@ -1,7 +1,8 @@
-import { ADD_SONG_TO_LIST, REMOVE_SONG_FROM_LIST } from "../actions";
+import { ADD_SONG_TO_LIST, REMOVE_SONG_FROM_LIST, SET_ALBUM } from "../actions";
 
 const inState = {
   likedSongs: [],
+  album: [],
 };
 
 const ListReducer = (state = inState, action) => {
@@ -15,6 +16,11 @@ const ListReducer = (state = inState, action) => {
       return {
         ...state,
         likedSongs: state.likedSongs.filter((el) => el.id !== action.payload),
+      };
+    case SET_ALBUM:
+      return {
+        ...state,
+        album: action.payload,
       };
     default:
       return state;

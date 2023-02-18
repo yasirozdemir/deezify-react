@@ -31,3 +31,43 @@ html {
 .w-40 {
   width: 30%;
 }
+
+.btn-transparent {
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.btn-transparent:hover {
+  cursor: default;
+}
+
+.btn-transparent:hover .play-button {
+  scale: 1.04;
+}
+
+.btn-transparent > svg {
+  fill: #a7a7a7;
+}
+
+.btn-transparent:hover > svg {
+  fill: #fff;
+}
+
+.btn-clear {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 7px 15px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.1em;
+  line-height: 16px;
+  margin-inline-end: 24px;
+}
+.btn-clear:hover {
+  cursor: default;
+}

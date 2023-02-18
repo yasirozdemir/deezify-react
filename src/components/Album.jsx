@@ -1,38 +1,71 @@
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import "../styles/Album.css";
+import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
+import { setAlbum } from "../redux/actions";
+import { Link, useParams } from "react-router-dom";
+import { format, parseISO } from "date-fns";
+import SongTableRow from "./SongTableRow";
+import { secToMinSec } from "../utils";
 
 const Album = () => {
+  const dispatch = useDispatch();
+  const albumID = useParams().albumID;
+
+  const album = useSelector((state) => state.lists.album);
+  const songs = album.tracks.data;
+
+  useState(() => {
+    dispatch(setAlbum(albumID));
+  }, []);
+
   return (
     <div className="sidebar-fix">
       <Container fluid id="albumInfoWrapper" className="pt-5">
-        <div className="row pt-5 pb-4">
-          <div className="col-md-4 col-lg-3 align-self-end">
-            <img id="albumCover" src="" className="w-100" alt="album cover" />
-          </div>
-          <div className="col align-self-end">
-            <h2 className="d-none d-lg-block">Album</h2>
-            <h1 id="albumTitle" className="mt-3">
-              Album Title
-            </h1>
-            <div className="d-flex flex-wrap align-items-center">
-              <img id="artistPicture" src="" alt="artist placeholder" />
-              <a href="#/" id="artistName">
-                Artist Name
-              </a>
-              <span>•</span>
-              <span id="year">Year</span>
-              <span className="d-none d-lg-block">•</span>
-              <span id="numOfSongs" className="d-none d-lg-block">
-                X Songs,
-              </span>
-              <span id="durationOfTrackList" className="d-none d-lg-block">
-                a mins b secs
-              </span>
-            </div>
-          </div>
-        </div>
+        {album && (
+          <Row className="pt-5 pb-4">
+            <Col md={4} lg={3} className="align-self-end">
+              <img
+                id="albumCover"
+                src={album.cover_big}
+                className="w-100"
+                alt="album cover"
+              />
+            </Col>
+            <Col className="align-self-end">
+              <h2 className="d-none d-lg-block">{album.type.toUpperCase()}</h2>
+              <h1 id="albumTitle" className="mt-3">
+                {album.title}
+              </h1>
+              <div className="d-flex flex-wrap align-items-center text-white">
+                <img
+                  id="artistPicture"
+                  src={album.artist.picture}
+                  alt="artist placeholder"
+                />
+                <Link to={"/artist/" + album.artist.id} id="artistName">
+                  {album.artist.name}
+                </Link>
+                <span>•</span>
+                <span id="year">
+                  {format(parseISO(album.release_date), "yyyy")}
+                </span>
+                <span className="d-none d-lg-block">•</span>
+                <span id="numOfSongs" className="d-none d-lg-block">
+                  {songs.length} songs,
+                </span>
+                <span className="d-none d-lg-block">
+                  {secToMinSec(album.duration, "m") +
+                    " min " +
+                    secToMinSec(album.duration, "s") +
+                    " sec"}
+                </span>
+              </div>
+            </Col>
+          </Row>
+        )}
       </Container>
-      <section id="songsWrapper">
+      <div id="songsWrapper">
         <Container
           fluid
           id="mediaButtonsWrapper"
@@ -63,24 +96,35 @@ const Album = () => {
             </svg>
           </button>
         </Container>
-        <div id="musicTableWrapper" className="container-fluid">
-          <table className="table table-hover table-dark table-borderless">
-            <thead className="sticky-top">
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Title</th>
-                <th scope="col" className="text-right">
-                  <i className="bi bi-clock"></i>
-                </th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-          <span>Release Date: Month DD, YYYY</span>
-          <br />
-          <small>Label</small>
-        </div>
-      </section>
+        {album && (
+          <Container fluid id="musicTableWrapper">
+            <Row className="sticky-top">
+              <div>#</div>
+              <Col>Title</Col>
+              <div className="text-right">
+                <svg
+                  fill="white"
+                  role="img"
+                  height="16"
+                  width="16"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"></path>
+                  <path d="M8 3.25a.75.75 0 0 1 .75.75v3.25H11a.75.75 0 0 1 0 1.5H7.25V4A.75.75 0 0 1 8 3.25z"></path>
+                </svg>
+              </div>
+            </Row>
+            {songs.map((s, i) => {
+              return <SongTableRow key={s.id} song={s} index={i + 1} />;
+            })}
+
+            <p className="m-0">
+              {format(parseISO(album.release_date), "MMMM dd, yyyy")}
+            </p>
+            <small>{album.label}</small>
+          </Container>
+        )}
+      </div>
     </div>
   );
 };

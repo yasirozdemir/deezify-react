@@ -7,12 +7,12 @@ export const SET_SEARCH_QUERY = "SET_SEARCH_QUERY";
 export const SET_SELECTED_SONG = "SET_SELECTED_SONG";
 export const ADD_SONG_TO_LIST = "ADD_SONG_TO_LIST";
 export const REMOVE_SONG_FROM_LIST = "REMOVE_SONG_FROM_LIST";
+export const SET_ALBUM = "SET_ALBUM";
 
 export const getSongData = (query) => {
   return async (dispatch) => {
     try {
-      const res = await fetch(url + query);
-      console.log(res);
+      const res = await fetch(url + "search?q=" + query);
       if (res.ok) {
         const { data } = await res.json();
         dispatch({
@@ -76,5 +76,24 @@ export const removeSongFromList = (id) => {
       type: REMOVE_SONG_FROM_LIST,
       payload: id,
     });
+  };
+};
+
+export const setAlbum = (albumID) => {
+  return async (dispatch) => {
+    try {
+      const res = await fetch(url + "album/" + albumID);
+      if (res.ok) {
+        const albumData = await res.json();
+        dispatch({
+          type: SET_ALBUM,
+          payload: albumData,
+        });
+      } else {
+        console.log("ERROR");
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
 };

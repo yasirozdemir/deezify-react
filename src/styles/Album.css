@@ -48,7 +48,7 @@
   height: 100px;
 }
 
-.play-button {
+#mediaButtonsWrapper .play-button {
   background-color: #1ed760;
   border-radius: 500px;
   height: 56px;
@@ -56,140 +56,29 @@
   margin-inline-end: 32px;
 }
 
-#likeButton {
+#mediaButtonsWrapper #likeButton {
   margin-inline-end: 32px;
 }
 
-.btn-transparent {
-  border: none;
-  background: none;
-  padding: 0;
+#musicTableWrapper .row.sticky-top {
+  top: 80px;
+  height: 28px;
+  border-bottom: solid 0.5px rgba(158, 158, 158, 0.815);
 }
 
-.btn-transparent:hover {
-  cursor: default;
+#musicTableWrapper .row {
+  padding-inline: 60px;
+  height: 55px;
 }
 
-.btn-transparent:hover .play-button {
-  scale: 1.04;
+.songRow a {
+  color: inherit;
 }
 
-.btn-transparent > svg {
-  fill: #a7a7a7;
+.songTitle {
+  color: #fff;
 }
 
-.btn-transparent:hover > svg {
-  fill: white;
-}
-
-.btn-clear {
-  border: 1px solid white;
-  border-radius: 4px;
-  background-color: transparent;
-  color: white;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 7px 15px;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 0.1em;
-  line-height: 16px;
-  margin-inline-end: 24px;
-}
-.btn-clear:hover {
-  cursor: default;
-}
-
-#musicTableWrapper {
-  padding-inline: 30px;
-  padding-bottom: 10px;
-}
-
-#musicTableWrapper thead {
-  top: 77px;
-  background-color: #121212;
-}
-
-#musicTableWrapper table thead tr {
-  background: linear-gradient(
-    to top,
-    #b7b7b750,
-    #b7b7b750 0.5px,
-    #28282828 0.5px,
-    #28282828 100%
-  );
-}
-
-#musicTableWrapper table {
-  background-color: transparent;
-}
-
-#musicTableWrapper table tbody {
-  color: #d3d3d3;
-}
-
-#musicTableWrapper table tbody th {
-  width: 30px;
-}
-
-#musicTableWrapper tbody td {
-  vertical-align: middle;
-}
-
-.text-green span:not(.artistName):not(.bi-play-fill) {
-  opacity: 0%;
-}
-
-.text-green .bi-play-fill,
-.text-green .bi-pause-fill {
-  opacity: 100% !important;
-}
-
-.bi.bi-pause-fill.showAnyway {
-  opacity: 100%;
-}
-
-@media (max-width: 685px) {
-  #musicTableWrapper td:nth-of-type(2) {
-    white-space: nowrap;
-    max-width: 150px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
-.bi.bi-heart.mr-5.d-none.d-md-inline {
-  opacity: 0%;
-}
-
-#musicTableWrapper tbody tr:hover .bi.bi-heart.mr-5.d-none.d-md-inline {
-  opacity: 100%;
-  cursor: pointer;
-}
-
-#musicTableWrapper tbody tr:hover .numberToPlayIcon > i {
-  opacity: 100%;
-  cursor: pointer;
-}
-#musicTableWrapper tbody tr:hover .numberToPlayIcon span {
-  opacity: 0%;
-}
-
-.numberToPlayIcon > i {
-  top: 17%;
-  left: 4px;
-  font-size: 2rem;
-  opacity: 0;
-}
-
-#musicTableWrapper tbody tr.selected {
-  background-color: hsla(0, 0%, 100%, 0.3);
-}
-
-#musicTableWrapper tbody tr.selected i {
-  opacity: 100%;
-}
-
-#musicTableWrapper tbody tr.selected .numberToPlayIcon > span {
-  opacity: 0%;
+.songRow:hover a {
+  color: #fff;
 }
