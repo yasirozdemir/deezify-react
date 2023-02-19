@@ -97,11 +97,11 @@ const Album = () => {
           </button>
         </Container>
         {album && (
-          <Container fluid id="musicTableWrapper">
+          <Container fluid id="songWrapper">
             <Row className="sticky-top">
               <div>#</div>
               <Col>Title</Col>
-              <div className="text-right">
+              <div className="text-right mr-4">
                 <svg
                   fill="white"
                   role="img"
@@ -117,8 +117,7 @@ const Album = () => {
             {songs.map((s, i) => {
               return <SongTableRow key={s.id} song={s} index={i + 1} />;
             })}
-
-            <p className="m-0">
+            <p className="mt-4 mb-0">
               {format(parseISO(album.release_date), "MMMM dd, yyyy")}
             </p>
             <small>{album.label}</small>

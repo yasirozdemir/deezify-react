@@ -60,25 +60,67 @@
   margin-inline-end: 32px;
 }
 
-#musicTableWrapper .row.sticky-top {
+#songWrapper {
+  padding-inline: 50px;
+}
+
+#songWrapper .row.sticky-top {
   top: 80px;
-  height: 28px;
-  border-bottom: solid 0.5px rgba(158, 158, 158, 0.815);
-}
-
-#musicTableWrapper .row {
+  margin-inline: -60px;
   padding-inline: 60px;
-  height: 55px;
+  padding-block-end: 25px;
+  height: 28px;
+  margin-block-end: 15px;
 }
 
-.songRow a {
+#songWrapper .row.sticky-top::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  right: 0;
+  bottom: -5px;
+  left: 0;
+  margin-inline: auto;
+  width: 93%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#songWrapper .row {
+  padding-inline: 15px;
+}
+
+#songWrapper .songRow {
+  height: 55px;
+  border-radius: 0.2rem;
+  margin-block-end: 10px;
+}
+
+#songWrapper .songRow:hover {
+  background-color: rgb(50, 50, 50);
+}
+
+#songWrapper .songRow a {
   color: inherit;
 }
 
-.songTitle {
+#songWrapper .songRow .songTitle {
   color: #fff;
 }
 
-.songRow:hover a {
+#songWrapper .songRow:hover a {
   color: #fff;
+}
+
+#songWrapper .songRow button {
+  background-color: transparent;
+  border: none;
+  fill: rgb(183, 183, 183);
+  visibility: none;
+  opacity: 0%;
+  cursor: default;
+}
+
+#songWrapper .songRow:hover button {
+  visibility: visible;
+  opacity: 100%;
 }
