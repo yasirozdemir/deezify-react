@@ -34,7 +34,7 @@ const Album = () => {
             </Col>
             <Col className="align-self-end">
               <h2 className="d-none d-lg-block">{album.type.toUpperCase()}</h2>
-              <h1 id="albumTitle" className="mt-3">
+              <h1 id="albumTitle" className="mt-2">
                 {album.title}
               </h1>
               <div className="d-flex flex-wrap align-items-center text-white">
